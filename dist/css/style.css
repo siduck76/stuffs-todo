@@ -1,5 +1,43 @@
+body {
+  margin: 0%;
+  padding: 0%;
+}
+
+/* main heading */
+
 h1 {
   font-family: "IBM Plex Sans", sans-serif;
-  text-align:center ;
+  text-align: center;
   margin-top: 2rem;
+}
+
+/* main div */
+
+.mainDiv {
+  margin:  1rem 4rem 0rem 4rem ;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-gap: 3rem;
+  padding: 2rem;
+}
+
+/* sidebar */
+
+.sidebar {
+  border: 2px solid black;
+  height: 100%;
+  width: 5rem;
+  padding: 2rem;
+}
+
+a {
+  margin-top: 2rem;
+}
+
+/* mainContent */
+
+.mainContent {
+  background-color: pink;
+  width: 100%;
+  height: 100%;
 }
