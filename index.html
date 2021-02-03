@@ -27,9 +27,14 @@
   </head>
 
   <body>
-
     <!-- heading -->
-    <h1>Stuffs To-do</h1>
+    <div class="topHeading">
+      <h1 class="siteName">Stuffs To-Do</h1>
+      <div class="newProjectBtn">
+        <i class="fas fa-plus"></i>
+        <a>new project</a>
+      </div>
+    </div>
 
     <div class="mainDiv">
       <!-- sticky sidebar -->
@@ -48,10 +53,26 @@
           <i class="fas fa-folder"></i>
           <a class="sideBarLinks">Projects</a>
         </div>
+
+        <div class="projectList">
+          <div class="defaultProject">
+            <i id="projectIcon" class="fas fa-folder"></i>
+            <a class="sideBarLinks">Default project</a>
+          </div>
+
+          <div class="defaultProject">
+            <i id="projectIcon" class="fas fa-folder"></i>
+            <a class="sideBarLinks">Default project</a>
+          </div>
+        </div>
       </div>
 
       <!-- main content's display -->
-      <div class="mainContent"></div>
+      <div class="mainContent">
+        <div class="currentProjectName">
+          <h2>Default Project</h2>
+        </div>
+      </div>
     </div>
 
     <script src="./dist/main.js"></script>
