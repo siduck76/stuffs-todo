@@ -1,12 +1,16 @@
 body {
   margin: 0%;
   padding: 0%;
+  background-color: white;
+  font-family: "Overpass", sans-serif;
+  color: #4c4f5c;
 }
 
 /* main heading */
 
 h1 {
   font-family: "IBM Plex Sans", sans-serif;
+
   text-align: center;
   margin-top: 2rem;
 }
@@ -14,29 +18,51 @@ h1 {
 /* main div */
 
 .mainDiv {
-  margin: 1rem 4rem 10rem 4rem;
   display: grid;
-  grid-template-columns: 15% 85%;
-  column-gap: 6rem;
-  padding:  0rem 4rem 0rem 4rem ;
+  grid-template-columns: 1fr 9fr;
+  grid-gap: 6rem;
+  padding: 2rem 4rem 2rem 4rem;
   height: auto;
 }
 
 /* sidebar */
 
 .sidebar {
-  border: 2px solid black;
   width: 100%;
   padding: 2rem;
+  display: grid;
+  border-radius: 1.4rem;
+  color: #6a6d7a;
 }
 
-a {
-  margin-top: 2rem;
+.todaysTodos,
+.projects,
+.importantTodos {
+  padding: 1rem;
+  font-size: 1.3rem;
+  text-align: left;
 }
 
+.fa-list-ul,
+.fa-bullseye,
+.fa-folder {
+  padding-right: 0.6rem;
+}
+
+.fa-list-ul {
+  color: #9592e7;
+}
+.fa-bullseye {
+  color: #c0e4fe;
+}
+
+.fa-folder {
+  color: #ffd9d8;
+}
 /* mainContent */
 
 .mainContent {
-  background-color: pink;
+  background-color: #fafafa;
   width: 100%;
+  border-radius: 1.4rem;
 }
