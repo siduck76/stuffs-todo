@@ -24,14 +24,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffeacb;
+  background-color: #c0e4fe;
   margin: 1rem;
   border-radius: 0.5rem;
 }
 
 .newProjectBtn:hover {
   cursor: pointer;
-  background-color: #c0e4fe;
+  background-color: #ffeacb;
   transition: 0.4s;
 }
 .newProjectBtn a {
@@ -59,10 +59,8 @@ body {
   padding: 1rem 2rem 2rem 2rem;
   display: grid;
   grid-template-rows: 40% 60%;
-
   border-radius: 0.5rem;
   color: #6a6d7a;
-
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.09), 0px 2px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -106,16 +104,21 @@ body {
 }
 
 .projectList {
-  padding: 0rem 0rem 0rem 1.4rem;
+  padding: 0rem 0rem 0rem 2rem;
   display: flex;
   flex-direction: column;
   text-align: left;
+
+  border-radius: 0.5rem;
 }
 
-.defaultProject {
+.project {
   padding-top: 0.5rem;
 }
 
+.sideBarLinks {
+  padding-left: 0rem;
+}
 #projectIcon {
   color: #6a6d7a;
 }
