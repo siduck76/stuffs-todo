@@ -107,7 +107,6 @@ body {
 
 .projectList {
   padding: 0rem 0rem 0rem 1.4rem;
-  text-align: center;
   display: flex;
   flex-direction: column;
   text-align: left;

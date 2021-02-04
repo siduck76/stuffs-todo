@@ -2,7 +2,7 @@ export const addProject_toList = (name) => {
   let list = document.querySelector(".projectList");
 
   let item = document.createElement("div");
-  item.classList.add(name);
+  item.classList.add(name.replace(/\s/g, ""));
 
   //item.innerHTML = <i id="projectIcon" class="fas fa-folder"></i>;
 
