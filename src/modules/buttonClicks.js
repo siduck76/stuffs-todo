@@ -13,4 +13,5 @@ saveProjectNameBtn.addEventListener("click", () => {
   addProject_toList(projectName);
 
   addProject.style.display = "none";
+  inputProjectName.value = "";
 });
