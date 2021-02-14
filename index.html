@@ -79,12 +79,40 @@
             <input type="text" id="inputProjectName" />
             <button type="button" id="saveProjectNameBtn">save</button>
           </div>
+
+          <div class="createTodo">
+            <div class="todo_Title">
+              <input type="text" id="todoTitle" placeholder="title" />
+            </div>
+
+            <div class="todo_Desc">
+              <textarea
+                id="todoDescription"
+                name="subject"
+                placeholder="write some description"
+              ></textarea>
+            </div>
+
+            <div class="todo_DueDate">
+              <input type="date" id="dueDate" name="dueDate" />
+            </div>
+
+            <div class="todo_Priority">
+              <h3>Todo Priority</h3>
+
+              <div class="priorDiv">
+                <div class="todo_Important">Important</div>
+                <div class="todo_Normal">Normal</div>
+              </div>
+            </div>
+
+            <div class="saveTodo">save</div>
+          </div>
         </div>
+
         <!-- add a todo -->
 
-        <div class="add_Todo">
-          +
-        </div>
+        <div class="newTodo">+</div>
       </div>
     </div>
 

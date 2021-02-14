@@ -19,4 +19,6 @@ export const addProject_toList = (name) => {
   list.appendChild(item);
 };
 
-
+export const todo = (pro_Name, title, description, duedate, priority) => {
+  return {pro_Name, title, description, duedate, priority };
+};
