@@ -20,5 +20,5 @@ export const addProject_toList = (name) => {
 };
 
 export const todo = (pro_Name, title, description, duedate, priority) => {
-  return {pro_Name, title, description, duedate, priority };
+  return { pro_Name, title, description, duedate, priority };
 };

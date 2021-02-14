@@ -68,8 +68,6 @@ let todo_prior;
 let todo_Imp = document.querySelector(".todo_Important");
 let todo_normie = document.querySelector(".todo_Normal");
 
-let pro_Name = document.querySelector(".project_Name").textContent;
-
 todo_Imp.addEventListener("click", () => {
   todo_prior = "important";
   todo_Imp.style.border = "2px dotted black";
@@ -81,9 +79,11 @@ todo_normie.addEventListener("click", () => {
 });
 
 saveTodo.addEventListener("click", () => {
+  let pro_Name = document.querySelector(".project_Name");
+
   createTodo.style.display = "none";
   const todoSample = todo(
-    pro_Name,
+    pro_Name.textContent,
     todoTitle.value,
     todoDescription.value,
     dueDate.value,
@@ -93,6 +93,11 @@ saveTodo.addEventListener("click", () => {
 
   console.log(todoList);
 
+  // clear all previous values
+  [pro_Name, todoTitle, todoDescription, dueDate].forEach((temp) => {
+    temp.value = "";
+    todo_prior = "";
+  });
   // clear priority buttons border;
 });
 
