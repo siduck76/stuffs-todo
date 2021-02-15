@@ -7,7 +7,7 @@ import {
   listOfProjects,
 } from "./divSelectors";
 
-import { addProject_toList, todo } from "./miscFunctions";
+import { addProject_toList, todo, createTodo_List } from "./miscFunctions";
 import { todoList, whichPro_Clicked } from "../index";
 
 let newProjectBtn = document.querySelector(".newProjectBtn");
@@ -26,6 +26,8 @@ const p_onHover = () => {
       let tmp = project.lastElementChild.innerText;
       pName.innerText = tmp;
       whichPro_Clicked = tmp;
+
+      //createTodo_List();
     });
 
     project.addEventListener("mouseover", () => {
@@ -82,6 +84,8 @@ saveTodo.addEventListener("click", () => {
   let pro_Name = document.querySelector(".project_Name");
 
   createTodo.style.display = "none";
+
+  //creates a todo
   const todoSample = todo(
     pro_Name.textContent,
     todoTitle.value,
@@ -91,14 +95,13 @@ saveTodo.addEventListener("click", () => {
   );
   todoList.push(todoSample);
 
-  console.log(todoList);
+  createTodo_List();
 
   // clear all previous values
   [pro_Name, todoTitle, todoDescription, dueDate].forEach((temp) => {
     temp.value = "";
     todo_prior = "";
   });
-  // clear priority buttons border;
 });
 
 newTodo.addEventListener("click", () => (createTodo.style.display = "grid"));
