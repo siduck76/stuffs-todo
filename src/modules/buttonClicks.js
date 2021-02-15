@@ -93,8 +93,8 @@ saveTodo.addEventListener("click", () => {
     dueDate.value,
     todo_prior
   );
-  todoList.push(todoSample);
 
+  todoList.push(todoSample);
   createTodo_List();
 
   // clear all previous values

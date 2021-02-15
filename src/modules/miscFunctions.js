@@ -1,4 +1,5 @@
 import { todoList } from "../index";
+import { pName } from "./divSelectors";
 
 export const addProject_toList = (name) => {
   let list = document.querySelector(".projectList");
@@ -23,17 +24,14 @@ export const todo = (pro_Name, title, description, duedate, priority) => {
   return { pro_Name, title, description, duedate, priority };
 };
 
+let tdlist = document.querySelector(".todolist_Div");
+
 export const createTodo_List = () => {
-  let tdlist = document.querySelector(".todolist_Div");
-
-  for (let i = 0; i <= todoList.length; i++) {
-    let pr_Name = document.querySelector(".project_Name");
-    /* if (todoList[i].pro_Name == pr_Name) {
-      const cr_Todo = document.createElement(".p");
-      cr_Todo.textContent = todoList[i].title;
+  for (let tt of todoList) {
+    if (tt.pro_Name == pName.textContent) {
+      const cr_Todo = document.createElement("p");
+      cr_Todo.textContent = tt.title;
       tdlist.appendChild(cr_Todo);
-    } */
-
-    console.log(todoList[i].title);
+    }
   }
 };
