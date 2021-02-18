@@ -28,10 +28,12 @@ export const todo = (pro_Name, title, description, duedate, priority) => {
   return { pro_Name, title, description, duedate, priority };
 };
 
+let tdlist = document.querySelector(".todolist_Div");
+
 export const createTodo_List = () => {
+  tdlist.innerHTML = "";
+
   for (let tt of todoList) {
-    if (tt.pro_Name == pName.textContent) {
-      create_todo(tt.title, tt.description);
-    }
+    if (tt.pro_Name == pName.textContent) create_todo(tt.title, tt.description);
   }
 };
