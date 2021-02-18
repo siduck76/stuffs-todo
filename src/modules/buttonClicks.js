@@ -9,7 +9,7 @@ import {
 
 import { addProject_toList, todo, createTodo_List } from "./miscFunctions";
 import { todoList, whichPro_Clicked } from "../index";
-import { create_todo } from "./createTodo";
+//import { create_todo } from "./createTodo";
 
 let newProjectBtn = document.querySelector(".newProjectBtn");
 let addProject = document.querySelector(".addProject");
@@ -28,7 +28,7 @@ const p_onHover = () => {
       pName.innerText = tmp;
       whichPro_Clicked = tmp;
 
-      //createTodo_List();
+      createTodo_List();
     });
 
     project.addEventListener("mouseover", () => {
