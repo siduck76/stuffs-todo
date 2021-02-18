@@ -30,8 +30,19 @@ export const todo = (pro_Name, title, description, duedate, priority) => {
 
 let tdlist = document.querySelector(".todolist_Div");
 
+export const saveto_LocalStorage = () =>
+  localStorage.setItem("saved_TodoList", JSON.stringify(todoList));
+
+export const retrieve_LocalStorage = () => {
+  let tempArray = localStorage.getItem("saved_TodoList");
+
+  let saved_Todolist = JSON.parse(tempArray);
+  todoList = saved_Todolist;
+};
+
 export const createTodo_List = () => {
-  tdlist.innerHTML = "";
+  saveto_LocalStorage();
+  tdlist.innerHTML = "";  // clear whole div to rm duplicates
 
   for (let tt of todoList) {
     if (tt.pro_Name == pName.textContent) create_todo(tt.title, tt.description);
