@@ -1,6 +1,7 @@
-import { todoList } from "../index";
+import { todoList, projectArr } from "../index";
 import { pName } from "./divSelectors";
 import { create_todo } from "./createTodo";
+import { p_onHover } from "./buttonClicks";
 
 export const addProject_toList = (name) => {
   let list = document.querySelector(".projectList");
@@ -22,6 +23,11 @@ export const addProject_toList = (name) => {
 
   item.appendChild(projectsName);
   list.appendChild(item);
+
+  if (name !== null || name !== undefined) {
+    projectArr.push(name);
+    p_onHover();
+  }
 };
 
 export const todo = (pro_Name, title, description, duedate, priority) => {
@@ -30,19 +36,28 @@ export const todo = (pro_Name, title, description, duedate, priority) => {
 
 let tdlist = document.querySelector(".todolist_Div");
 
-export const saveto_LocalStorage = () =>
+export const saveto_LocalStorage = () => {
   localStorage.setItem("saved_TodoList", JSON.stringify(todoList));
+  localStorage.setItem("saved_ProjectList", JSON.stringify(projectArr));
+};
 
 export const retrieve_LocalStorage = () => {
   let tempArray = localStorage.getItem("saved_TodoList");
 
   let saved_Todolist = JSON.parse(tempArray);
   todoList = saved_Todolist;
+
+  // save projectlist
+
+  let tempList = localStorage.getItem("saved_ProjectList");
+  let saved_proList = JSON.parse(tempList);
+
+  saved_proList.forEach((bb) => addProject_toList(bb));
 };
 
 export const createTodo_List = () => {
   saveto_LocalStorage();
-  tdlist.innerHTML = "";  // clear whole div to rm duplicates
+  tdlist.innerHTML = ""; // clear whole div to rm duplicates
 
   for (let tt of todoList) {
     if (tt.pro_Name == pName.textContent) create_todo(tt.title, tt.description);

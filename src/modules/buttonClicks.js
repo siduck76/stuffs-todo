@@ -7,9 +7,14 @@ import {
   listOfProjects,
 } from "./divSelectors";
 
-import { addProject_toList, todo, createTodo_List } from "./miscFunctions";
+import {
+  addProject_toList,
+  todo,
+  createTodo_List,
+  saveto_LocalStorage,
+} from "./miscFunctions";
+
 import { todoList, whichPro_Clicked } from "../index";
-//import { create_todo } from "./createTodo";
 
 let newProjectBtn = document.querySelector(".newProjectBtn");
 let addProject = document.querySelector(".addProject");
@@ -19,7 +24,7 @@ newProjectBtn.addEventListener(
   () => (addProject.style.display = "grid")
 );
 
-const p_onHover = () => {
+export const p_onHover = () => {
   listOfProjects = document.querySelectorAll(".project"); // updates the var
 
   listOfProjects.forEach((project) => {
@@ -52,6 +57,7 @@ saveProjectNameBtn.addEventListener("click", () => {
   addProject.style.display = "none";
   inputProjectName.value = "";
 
+  saveto_LocalStorage();
   p_onHover();
 });
 
@@ -86,7 +92,7 @@ saveTodo.addEventListener("click", () => {
 
   createTodo.style.display = "none";
 
-  //creates a todo
+  // creates a todo
   const todoSample = todo(
     pro_Name.textContent,
     todoTitle.value,
