@@ -29,9 +29,11 @@ let tdlist = document.querySelector(".todolist_Div");
 export const createTodo_List = () => {
   for (let tt of todoList) {
     if (tt.pro_Name == pName.textContent) {
+
       const cr_Todo = document.createElement("p");
       cr_Todo.textContent = tt.title;
       tdlist.appendChild(cr_Todo);
+
     }
   }
 };

@@ -9,6 +9,7 @@ import {
 
 import { addProject_toList, todo, createTodo_List } from "./miscFunctions";
 import { todoList, whichPro_Clicked } from "../index";
+import { create_todo } from "./createTodo";
 
 let newProjectBtn = document.querySelector(".newProjectBtn");
 let addProject = document.querySelector(".addProject");
@@ -95,6 +96,7 @@ saveTodo.addEventListener("click", () => {
   );
 
   todoList.push(todoSample);
+
   createTodo_List();
 
   // clear all previous values
