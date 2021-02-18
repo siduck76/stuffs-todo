@@ -97,6 +97,7 @@ saveTodo.addEventListener("click", () => {
 
   todoList.push(todoSample);
 
+  create_todo();
   createTodo_List();
 
   // clear all previous values
