@@ -70,7 +70,6 @@ body {
   display: grid;
   grid-template-rows: 40% 60%;
   border-radius: 0.5rem;
-  color: #6a6d7a;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.09), 0px 2px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -114,20 +113,22 @@ body {
 }
 
 .projectList {
-  padding: 0rem 0rem 0rem 2rem;
+  padding: 0rem 0rem 0rem 1.6rem;
   display: flex;
   flex-direction: column;
   text-align: left;
-  border-radius: 0.5rem;
 }
 
 .project {
+  border-left: 2px solid #f0f0f0;
+  padding-left: 2rem;
   padding-top: 0.5rem;
 }
 
 .sideBarLinks {
   padding-left: 0rem;
 }
+
 #projectIcon {
   color: #6a6d7a;
 }

@@ -61,6 +61,18 @@ saveProjectNameBtn.addEventListener("click", () => {
   p_onHover();
 });
 
+let todays_Todo = document.querySelector(".todaysTodos");
+
+const today_TodoClick = () => {
+  todays_Todo.addEventListener("click", () => {
+    pName.innerText = "Today";
+
+    whichPro_Clicked = "Today";
+    createTodo_List();
+  });
+};
+today_TodoClick();
+
 p_onHover();
 
 // todo item stuffs
