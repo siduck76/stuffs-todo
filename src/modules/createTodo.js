@@ -33,7 +33,7 @@ export const create_todo = (title, desc) => {
   let delete_Todo = document.createElement("div");
   delete_Todo.classList.add("td_inf");
 
-  create_Todo_buttons("fas", "fa-info-circle");
+  create_Todo_buttons("fas", "fa-edit");
   create_Todo_buttons("far", "fa-circle");
   create_Todo_buttons("fas", "fa-trash");
 
