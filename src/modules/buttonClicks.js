@@ -15,6 +15,7 @@ import {
 } from "./miscFunctions";
 
 import { todoList, whichPro_Clicked } from "../index";
+import { create_todo } from "./createTodo";
 
 let newProjectBtn = document.querySelector(".newProjectBtn");
 let addProject = document.querySelector(".addProject");
@@ -71,6 +72,7 @@ const today_TodoClick = () => {
     createTodo_List();
   });
 };
+
 today_TodoClick();
 
 p_onHover();
@@ -125,3 +127,14 @@ saveTodo.addEventListener("click", () => {
 });
 
 newTodo.addEventListener("click", () => (createTodo.style.display = "grid"));
+
+let imp_Td = document.querySelector(".importantTodos");
+imp_Td.addEventListener("click", () => {
+  pName.innerText = "Important Todos!";
+
+  let tdlist = document.querySelector(".todolist_Div");
+  tdlist.innerHTML = "";
+
+  for (let tt of todoList)
+    if (tt.priority == "important") create_todo(tt.title, tt.description);
+});
