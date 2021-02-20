@@ -1,4 +1,4 @@
 # stuffs-todo
 lil project given from Odin
 
-<a href="https://siduck76.github.io/stuffs-todo/"> in-progress </a>
+<a href="https://hopeful-hawking-5502b3.netlify.app/"> in-progress </a>
