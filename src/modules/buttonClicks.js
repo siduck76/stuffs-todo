@@ -20,10 +20,9 @@ import { create_todo } from "./createTodo";
 let newProjectBtn = document.querySelector(".newProjectBtn");
 let addProject = document.querySelector(".addProject");
 
-newProjectBtn.addEventListener(
-  "click",
-  () => (addProject.style.display = "grid")
-);
+newProjectBtn.addEventListener("click", () => {
+  addProject.style.display = "grid";
+});
 
 export const p_onHover = () => {
   listOfProjects = document.querySelectorAll(".project"); // updates the var
