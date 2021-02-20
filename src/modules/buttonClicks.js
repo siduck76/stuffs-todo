@@ -93,14 +93,21 @@ let todo_normie = document.querySelector(".todo_Normal");
 
 todo_Imp.addEventListener("click", () => {
   todo_prior = "important";
-  todo_Imp.style.border = "2px dotted black";
+  todo_Imp.style.backgroundColor = "#f0f0f0";
+  todo_normie.style.backgroundColor = "white";
 });
 
 todo_normie.addEventListener("click", () => {
   todo_prior = "normal";
-  todo_normie.style.border = "2px dotted black";
+  todo_normie.style.backgroundColor = "#f0f0f0";
+  todo_Imp.style.backgroundColor = "white";
 });
 
+[todo_normie, todo_Imp].forEach((temp) => {
+  temp.addEventListener("mouseover", () => {
+    temp.style.cursor = "pointer";
+  });
+});
 saveTodo.addEventListener("click", () => {
   let pro_Name = document.querySelector(".project_Name");
 
@@ -130,7 +137,7 @@ newTodo.addEventListener("click", () => (createTodo.style.display = "grid"));
 
 let imp_Td = document.querySelector(".importantTodos");
 imp_Td.addEventListener("click", () => {
-  pName.innerText = "Important Todos!";
+  pName.innerText = "All Important Todos!";
 
   let tdlist = document.querySelector(".todolist_Div");
   tdlist.innerHTML = "";

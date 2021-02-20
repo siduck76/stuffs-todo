@@ -91,6 +91,9 @@ body {
   border-radius: 0.5rem;
 }
 
+.todo_Normal , .todo_Important{
+  padding: 1rem;
+}
 .fa-list-ul,
 .fa-bullseye,
 .fa-folder {
