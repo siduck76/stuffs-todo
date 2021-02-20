@@ -1,4 +1,4 @@
-import { todoList, projectArr } from "../index";
+import { todoList, projectArr, whichPro_Clicked } from "../index";
 import { pName } from "./divSelectors";
 import { create_todo } from "./createTodo";
 import { p_onHover } from "./buttonClicks";
@@ -62,4 +62,11 @@ export const createTodo_List = () => {
   for (let tt of todoList) {
     if (tt.pro_Name == pName.textContent) create_todo(tt.title, tt.description);
   }
+};
+
+export const showTodays_todo = () => {
+  pName.innerText = "Today";
+
+  whichPro_Clicked = "Today";
+  createTodo_List();
 };
