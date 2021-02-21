@@ -13,9 +13,11 @@ export const deleteTodos = () => {
       for (let i = 0; i < todoList.length; i++) {
         if (todoList[i].pro_Name == pName.textContent) {
           if (todoList[i].title == delete_ThisTodo) {
-            todoList.splice(i, 1);
+            todoList.splice(i, 1); //deletes todo from array
+
             saveto_LocalStorage();
             createTodo_List();
+
             break;
           }
         }

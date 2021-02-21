@@ -3,6 +3,7 @@ import { pName } from "./divSelectors";
 import { create_todo } from "./createTodo";
 import { p_onHover } from "./buttonClicks";
 import { deleteTodos } from "./delete_Todo";
+import { makeTodoChecked } from "./makeTodo_Checked";
 
 export const addProject_toList = (name) => {
   let list = document.querySelector(".projectList");
@@ -65,6 +66,8 @@ export const createTodo_List = () => {
   }
 
   deleteTodos();
+  let tempTodo = document.querySelector(".atodo");
+  if (tempTodo != null) makeTodoChecked();
 };
 
 export const showTodays_todo = () => {

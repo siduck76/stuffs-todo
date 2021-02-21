@@ -91,7 +91,8 @@ body {
   border-radius: 0.5rem;
 }
 
-.todo_Normal , .todo_Important{
+.todo_Normal,
+.todo_Important {
   padding: 1rem;
 }
 .fa-list-ul,
@@ -328,5 +329,15 @@ body {
 }
 
 .todo_done {
+  background-color: #dcffed;
+  color: #5a7d6b;
+}
 
+.todo_done_Title {
+  border-bottom: 2px solid #5a7d6b;
+  text-decoration: line-through;
+}
+
+.todo_done_Cut {
+  text-decoration: line-through;
 }
