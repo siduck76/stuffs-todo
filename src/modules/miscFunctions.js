@@ -2,6 +2,7 @@ import { todoList, projectArr, whichPro_Clicked } from "../index";
 import { pName } from "./divSelectors";
 import { create_todo } from "./createTodo";
 import { p_onHover } from "./buttonClicks";
+import { deleteTodos } from "./delete_Todo";
 
 export const addProject_toList = (name) => {
   let list = document.querySelector(".projectList");
@@ -62,6 +63,8 @@ export const createTodo_List = () => {
   for (let tt of todoList) {
     if (tt.pro_Name == pName.textContent) create_todo(tt.title, tt.description);
   }
+
+  deleteTodos();
 };
 
 export const showTodays_todo = () => {

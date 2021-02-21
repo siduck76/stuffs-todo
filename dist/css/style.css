@@ -322,6 +322,11 @@ body {
 
 .fa-edit,
 .fa-circle,
+.fa-check-circle,
 .fa-trash {
   padding-left: 0.5rem;
+}
+
+.todo_done {
+
 }
