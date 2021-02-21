@@ -335,11 +335,6 @@ body {
 
 .todo_done_Title {
   border-bottom: 2px solid #5a7d6b;
-  text-decoration: line-through;
-}
-
-.todo_done_Cut {
-  text-decoration: line-through;
 }
 
 /* todo status */

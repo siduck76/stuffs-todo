@@ -14,7 +14,6 @@ export const makeTodoChecked = () => {
       let temp_WholeTodo = t.parentElement.parentElement;
       temp_WholeTodo.classList.toggle("todo_done");
       temp_WholeTodo.children[0].classList.toggle("todo_done_Title");
-      temp_WholeTodo.children[1].classList.toggle("todo_done_Cut");
       temp_WholeTodo.children[2].classList.toggle("todo_done_Btns");
 
       t.classList.toggle("fa-circle");
@@ -30,9 +29,12 @@ export const makeTodoChecked = () => {
 
               if (tempBGcolor == lightGreenCol) {
                 tt.status = "done";
+                t.children[3].textContent = "done";
                 saveto_LocalStorage();
               } else if (tempBGcolor == lavenderBlushCol) {
                 tt.status = "not_done";
+                t.children[3].textContent = "not_done";
+
                 saveto_LocalStorage();
               }
             }
@@ -43,4 +45,21 @@ export const makeTodoChecked = () => {
       check_forDoneTodos();
     });
   });
+};
+
+export const addCol_FinishedTODOS = () => {
+  for (let tt of todoList) {
+    let atodos = document.querySelectorAll(".atodo");
+
+    atodos.forEach((t) => {
+      if (tt.title == t.firstElementChild.textContent) {
+        if (tt.status == "done") {
+          t.classList.add("todo_done");
+          t.firstElementChild.classList.add("todo_done_Cut");
+          t.children[1].classList.add("todo_done_Cut");
+          t.children[2].children[1].classList.remove("fa-circle");
+        }
+      }
+    });
+  }
 };
