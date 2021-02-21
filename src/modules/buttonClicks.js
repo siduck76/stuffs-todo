@@ -16,6 +16,8 @@ import {
 
 import { todoList, whichPro_Clicked } from "../index";
 import { create_todo } from "./createTodo";
+import { deleteTodos } from "./delete_Todo";
+import { makeTodoChecked, addCol_FinishedTODOS } from "./makeTodo_Checked";
 
 let newProjectBtn = document.querySelector(".newProjectBtn");
 let addProject = document.querySelector(".addProject");
@@ -143,5 +145,14 @@ imp_Td.addEventListener("click", () => {
   tdlist.innerHTML = "";
 
   for (let tt of todoList)
-    if (tt.priority == "important") create_todo(tt.title, tt.description);
+    if (tt.priority == "important")
+      create_todo(tt.title, tt.description, "not_done");
+
+  deleteTodos();
+
+  let tempTodo = document.querySelector(".atodo");
+  if (tempTodo != null) {
+    makeTodoChecked();
+    addCol_FinishedTODOS();
+  }
 });
