@@ -118,7 +118,8 @@ saveTodo.addEventListener("click", () => {
     todoTitle.value,
     todoDescription.value,
     dueDate.value,
-    todo_prior
+    todo_prior,
+    "not_done"
   );
 
   todoList.push(todoSample);

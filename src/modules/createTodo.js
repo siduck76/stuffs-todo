@@ -1,6 +1,6 @@
 let todolist_Div = document.querySelector(".todolist_Div");
 
-export const create_todo = (title, desc) => {
+export const create_todo = (title, desc, status) => {
   let todoDiv = document.createElement("div");
   todoDiv.classList.add("aTodo");
 
@@ -38,6 +38,13 @@ export const create_todo = (title, desc) => {
   create_Todo_buttons("fas", "fa-trash");
 
   todoDiv.appendChild(td_info);
+
+  // todo status
+
+  let tdstatus = document.createElement("div");
+  tdstatus.classList.add("todoStatus");
+  tdstatus.textContent = status;
+  todoDiv.appendChild(tdstatus);
 
   todolist_Div.appendChild(todoDiv);
 };

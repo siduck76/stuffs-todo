@@ -32,8 +32,15 @@ export const addProject_toList = (name) => {
   }
 };
 
-export const todo = (pro_Name, title, description, duedate, priority) => {
-  return { pro_Name, title, description, duedate, priority };
+export const todo = (
+  pro_Name,
+  title,
+  description,
+  duedate,
+  priority,
+  status
+) => {
+  return { pro_Name, title, description, duedate, priority, status };
 };
 
 let tdlist = document.querySelector(".todolist_Div");
@@ -62,7 +69,8 @@ export const createTodo_List = () => {
   tdlist.innerHTML = ""; // clear whole div to rm duplicates
 
   for (let tt of todoList) {
-    if (tt.pro_Name == pName.textContent) create_todo(tt.title, tt.description);
+    if (tt.pro_Name == pName.textContent)
+      create_todo(tt.title, tt.description, "not_done");
   }
 
   deleteTodos();

@@ -341,3 +341,9 @@ body {
 .todo_done_Cut {
   text-decoration: line-through;
 }
+
+/* todo status */
+
+.todoStatus {
+  display: none;
+}
