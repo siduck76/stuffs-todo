@@ -1,8 +1,8 @@
 import { saveto_LocalStorage } from "./miscFunctions";
 import { todoList } from "../index";
 
-let lavenderBlushCol = "rgb(255, 240, 245)";
-let lightGreenCol = "rgb(220, 255, 237)";
+let todo_Col = "rgb(255, 255, 163)";
+let finished_todoCol = "rgb(220, 255, 237)";
 
 export const makeTodoChecked = () => {
   let checkIcons = document.querySelectorAll(".fa-circle");
@@ -27,11 +27,11 @@ export const makeTodoChecked = () => {
               let style = window.getComputedStyle(t);
               let tempBGcolor = style.getPropertyValue("background-color");
 
-              if (tempBGcolor == lightGreenCol) {
+              if (tempBGcolor == finished_todoCol) {
                 tt.status = "done";
                 t.children[3].textContent = "done";
                 saveto_LocalStorage();
-              } else if (tempBGcolor == lavenderBlushCol) {
+              } else if (tempBGcolor == todo_Col) {
                 tt.status = "not_done";
                 t.children[3].textContent = "not_done";
 
