@@ -146,6 +146,8 @@ saveTodo.addEventListener("click", () => {
 
 newTodo.addEventListener("click", () => (createTodo.style.display = "grid"));
 
+// stuffs to happen when important todo is clicked
+
 let imp_Td = document.querySelector(".importantTodos");
 imp_Td.addEventListener("click", () => {
   pName.innerText = "All Important Todos!";
@@ -153,9 +155,21 @@ imp_Td.addEventListener("click", () => {
   let tdlist = document.querySelector(".todolist_Div");
   tdlist.innerHTML = "";
 
-  for (let tt of todoList)
-    if (tt.priority == "important")
+  for (let tt of todoList) {
+    if (tt.priority == "important") {
       create_todo(tt.title, tt.description, "not_done");
+
+      let atodos = document.querySelectorAll(".atodo");
+
+      atodos.forEach((t) => {
+        let tmp_todotitle = t.firstElementChild.textContent;
+        if (tmp_todotitle == tt.title) {
+          t.style.backgroundColor = "#FFB2B2";
+          t.children[2].style.backgroundColor = "#CC8E8E"
+        }
+      });
+    }
+  }
 
   deleteTodos();
 

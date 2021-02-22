@@ -31,7 +31,9 @@ export const makeTodoChecked = () => {
                 tt.status = "done";
                 t.children[3].textContent = "done";
                 saveto_LocalStorage();
-              } else if (tempBGcolor == normal_TodoCol) {
+              } 
+
+              else if (tempBGcolor == normal_TodoCol) {
                 tt.status = "not_done";
                 t.children[3].textContent = "not_done";
 

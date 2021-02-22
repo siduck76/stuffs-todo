@@ -335,6 +335,10 @@ body {
   text-decoration: line-through;
 }
 
+.todo_done_Btns {
+  /*  background-color: #F0FFFF; */
+}
+
 .todo_done_Title {
   border-bottom: 2px solid #5a7d6b;
 }
