@@ -1,7 +1,7 @@
 import { saveto_LocalStorage } from "./miscFunctions";
 import { todoList } from "../index";
 
-let todo_Col = "rgb(255, 255, 163)";
+let normal_TodoCol = "rgb(255, 255, 203)";
 let finished_todoCol = "rgb(220, 255, 237)";
 
 export const makeTodoChecked = () => {
@@ -31,7 +31,7 @@ export const makeTodoChecked = () => {
                 tt.status = "done";
                 t.children[3].textContent = "done";
                 saveto_LocalStorage();
-              } else if (tempBGcolor == todo_Col) {
+              } else if (tempBGcolor == normal_TodoCol) {
                 tt.status = "not_done";
                 t.children[3].textContent = "not_done";
 

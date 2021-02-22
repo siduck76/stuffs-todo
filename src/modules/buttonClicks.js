@@ -71,6 +71,15 @@ const today_TodoClick = () => {
 
     whichPro_Clicked = "Today";
     createTodo_List();
+
+    // enables deleting todo and making em checked*
+    deleteTodos();
+
+    let tempTodo = document.querySelector(".atodo");
+    if (tempTodo != null) {
+      makeTodoChecked();
+      addCol_FinishedTODOS();
+    }
   });
 };
 
