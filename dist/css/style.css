@@ -70,6 +70,7 @@ body {
 
 .sidebar {
   width: 100%;
+  height: 100%;
   padding: 2rem;
   display: grid;
   grid-template-rows: 40% 60%;
@@ -206,7 +207,7 @@ body {
   background-color: #4c4f5c;
   justify-content: center;
   align-items: center;
-  float: right;
+  float: left;
   border-radius: 50%;
   font-size: 2rem;
   transition: all 0.2s;
