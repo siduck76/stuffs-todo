@@ -151,6 +151,12 @@ body {
   grid-template-rows: 6fr 1fr;
 }
 
+
+.currentProjectName  .fa-adjust{
+  float: right;
+  font-size: 1.5rem;
+}
+
 .currentProjectName h2 {
   font-family: "IBM Plex Sans", sans-serif;
   text-align: center;
