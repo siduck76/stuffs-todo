@@ -122,17 +122,19 @@ body {
 .todo_Important {
   padding: 1rem;
 }
-.fa-list-ul,
+
+.fa-calendar-day,
 .fa-meteor,
 .fa-folder {
   padding-right: 0.6rem;
 }
+
 .br {
   padding: 0.5rem;
   font-size: 1.1rem;
 }
 
-.fa-list-ul {
+.fa-calendar-day {
   color: #9592e7;
 }
 
@@ -147,6 +149,7 @@ body {
 .dark_meteor {
   color: #fff9b0;
 }
+
 .fa-folder {
   color: #c0e4fe;
 }

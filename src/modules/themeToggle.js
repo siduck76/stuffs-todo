@@ -37,7 +37,7 @@ const apply_DarkTheme = () => {
     });
   });
 
-  let listIcon = document.querySelector(".fa-list-ul");
+  let listIcon = document.querySelector(".fa-calendar-day");
   let meteorIcon = document.querySelector(".fa-meteor");
   let folderIcon = document.querySelector(".fa-folder");
 
