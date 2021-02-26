@@ -1,4 +1,4 @@
-import { todoList, projectArr, whichPro_Clicked } from "../index";
+import { todoList, projectArr, whichPro_Clicked , defaultTheme } from "../index";
 import { pName } from "./divSelectors";
 import { create_todo } from "./createTodo";
 import { p_onHover } from "./buttonClicks";
@@ -48,6 +48,7 @@ let tdlist = document.querySelector(".todolist_Div");
 export const saveto_LocalStorage = () => {
   localStorage.setItem("saved_TodoList", JSON.stringify(todoList));
   localStorage.setItem("saved_ProjectList", JSON.stringify(projectArr));
+ // localStorage.setItem("saved_Theme", defaultTheme)
 };
 
 export const retrieve_LocalStorage = () => {

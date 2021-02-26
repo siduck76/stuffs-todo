@@ -108,14 +108,16 @@ body {
 .dark_Today_ImportantTodos {
   background-color: #1d2021;
 }
+
 .todaysTodos:hover,
 .projects:hover,
 .importantTodos:hover {
+  cursor: pointer;
+  /*
   background-color: #f5f5f5;
-  cursor: default;
   transition: 0.4s;
   cursor: pointer;
-  border-radius: 0.5rem;
+  border-radius: 0.5rem; */
 }
 
 .todo_Normal,
