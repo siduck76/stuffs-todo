@@ -5,6 +5,12 @@ body {
   font-family: "Overpass", sans-serif;
   color: #4c4f5c;
   margin-bottom: 10rem;
+  transition: 0.2s all;
+}
+
+.darkBody {
+  background-color: #181b1c;
+  color: white;
 }
 
 /* main heading */
@@ -21,14 +27,24 @@ body {
   color: white;
 }
 
+.dark_topHeading {
+  background-color: #1f2223;
+  color: #c8ccd4;
+}
+
 .newProjectBtn {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: white;
   color: #4c4f5c;
-  margin: 1rem;
+  margin: 1.4rem;
   border-radius: 0.5rem;
+}
+
+.dark_newProjectBtn {
+  background-color: #61afef;
+  color: #1f2223;
 }
 
 .newProjectBtn:hover {
@@ -77,6 +93,10 @@ body {
   border-right: 2px solid #f0f0f0;
 }
 
+.dark_sidebar {
+  border-right: 2px solid #1d2021;
+}
+
 .todaysTodos,
 .projects,
 .importantTodos {
@@ -85,6 +105,9 @@ body {
   text-align: left;
 }
 
+.dark_Today_ImportantTodos {
+  background-color: #1d2021
+}
 .todaysTodos:hover,
 .projects:hover,
 .importantTodos:hover {
@@ -151,8 +174,7 @@ body {
   grid-template-rows: 6fr 1fr;
 }
 
-
-.currentProjectName  .fa-adjust{
+.currentProjectName .fa-adjust {
   float: right;
   font-size: 1.5rem;
 }
