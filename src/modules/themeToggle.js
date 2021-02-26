@@ -36,6 +36,31 @@ const apply_DarkTheme = () => {
       tmp.style.backgroundColor = "#181b1c";
     });
   });
+
+  let listIcon = document.querySelector(".fa-list-ul");
+  let meteorIcon = document.querySelector(".fa-meteor");
+  let folderIcon = document.querySelector(".fa-folder");
+
+  listIcon.classList.toggle("dark_List");
+  meteorIcon.classList.toggle("dark_meteor");
+  folderIcon.classList.toggle("dark_folder");
+
+  let sideBarLinks = document.querySelectorAll(".sideBarLinks");
+  sideBarLinks.forEach((t) => {
+    t.classList.toggle("dark_sidebarLinks");
+  });
+
+  let project = document.querySelectorAll(".project");
+
+  project.forEach((t) => {
+    t.classList.toggle("dark_project");
+  });
+
+  let proIcon = document.querySelectorAll(".projectIcon");
+
+  proIcon.forEach((t) => {
+    t.classList.toggle("dark_projectIcon");
+  });
 };
 
 themeToggle_Btn.addEventListener("click", () => {

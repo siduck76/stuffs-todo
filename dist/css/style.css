@@ -106,7 +106,7 @@ body {
 }
 
 .dark_Today_ImportantTodos {
-  background-color: #1d2021
+  background-color: #1d2021;
 }
 .todaysTodos:hover,
 .projects:hover,
@@ -135,12 +135,24 @@ body {
 .fa-list-ul {
   color: #9592e7;
 }
+
+.dark_List {
+  color: #61afef;
+}
+
 .fa-meteor {
   color: #ff8080;
 }
 
+.dark_meteor {
+  color: #fff9b0;
+}
 .fa-folder {
   color: #c0e4fe;
+}
+
+.dark_folder {
+  color: #d08770;
 }
 
 .projectList {
@@ -151,17 +163,31 @@ body {
 }
 
 .project {
-  border-left: 2px solid #f0f0f0;
+  border-left: 0.2rem solid #f0f0f0;
   padding-left: 2rem;
   padding-top: 0.5rem;
 }
 
+.dark_project {
+  border-left: 0.2rem solid #a3be8c;
+  color: #a3be8c;
+  padding-left: 2rem;
+  padding-top: 0.5rem;
+}
 .sideBarLinks {
   padding-left: 0rem;
 }
 
-#projectIcon {
+.dark_sidebarLinks {
+  color: #c8ccd4;
+}
+
+.projectIcon {
   color: #6a6d7a;
+}
+
+.dark_projectIcon {
+  color: #c8ccd4;
 }
 
 /* mainContent */
@@ -327,6 +353,10 @@ body {
   width: 15rem;
   padding: 0.3rem;
   border-radius: 0.5rem;
+}
+
+.dark_atodo {
+  background-color: #1d2021;
 }
 
 .aTodo_Title {

@@ -14,7 +14,7 @@ export const addProject_toList = (name) => {
   // item.innerHTML = <i id="projectIcon" class="fas fa-folder"></i>;
 
   let defaultIcon = document.createElement("i");
-  defaultIcon.setAttribute("id", "projectIcon");
+  defaultIcon.classList.add("projectIcon");
   defaultIcon.classList.add("fas", "fa-folder");
 
   item.appendChild(defaultIcon);
