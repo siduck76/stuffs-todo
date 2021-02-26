@@ -6,6 +6,7 @@ import {
 } from "./modules/miscFunctions";
 
 import {} from "./modules/settingsPage";
+import {} from "./modules/themeToggle";
 
 export let whichPro_Clicked = "default";
 export let todoList = [];
