@@ -208,6 +208,7 @@ body {
 .currentProjectName .fa-adjust {
   float: right;
   font-size: 1.5rem;
+  display: none;
 }
 
 .currentProjectName h2 {
