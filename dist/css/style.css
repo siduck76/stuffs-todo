@@ -362,6 +362,7 @@ body {
   width: 15rem;
   padding: 0.3rem;
   border-radius: 0.5rem;
+  background-image: url("../assets/img/doneChan.png");
 }
 
 .dark_atodo {
