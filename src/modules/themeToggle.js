@@ -2,62 +2,41 @@ import { defaultTheme } from "../index";
 
 let themeToggle_Btn = document.querySelector(".fa-adjust");
 
+const create_Theme = (() => {
+  const bodyCol = (fg, bg) => {
+    let body = document.querySelector("body");
+    body.style.backgroundColor = bg;
+    body.style.color = fg;
+  };
+
+  const topHeading_Col = (fg, bg) => {
+    let topH = document.querySelector(".topHeading");
+    topH.style.backgroundColor = bg;
+    topH.style.color = fg;
+  };
+  return {
+    bodyCol,
+    topHeading_Col,
+  };
+})();
+
+const apply_LightTheme = () => {
+  create_Theme.bodyCol("#4c4f5c", "white");
+    create_Theme.topHeading_Col("white", "#1d2021");
+
+};
+
 const apply_DarkTheme = () => {
-  // body
-
-  let body = document.querySelector("body");
-  body.classList.toggle("darkBody");
-
-  // topheading
-
-  let topH = document.querySelector(".topheading");
-  topH.classList.toggle("dark_topHeading");
-
-  // new project btn
-
-  let newProjectBtn = document.querySelector(".newProjectBtn");
-  newProjectBtn.classList.toggle("dark_newProjectBtn");
-
-  // sidebar
-
-  let sBar = document.querySelector(".sidebar");
-  sBar.classList.toggle("dark_sidebar");
-
-
-  let listIcon = document.querySelector(".fa-calendar-day");
-  let meteorIcon = document.querySelector(".fa-meteor");
-  let folderIcon = document.querySelector(".fa-folder");
-
-  listIcon.classList.toggle("dark_List");
-  meteorIcon.classList.toggle("dark_meteor");
-  folderIcon.classList.toggle("dark_folder");
-
-  let sideBarLinks = document.querySelectorAll(".sideBarLinks");
-  sideBarLinks.forEach((t) => {
-    t.classList.toggle("dark_sidebarLinks");
-  });
-
-  let project = document.querySelectorAll(".project");
-
-  project.forEach((t) => {
-    t.classList.toggle("dark_project");
-  });
-
-  let proIcon = document.querySelectorAll(".projectIcon");
-
-  proIcon.forEach((t) => {
-    t.classList.toggle("dark_projectIcon");
-  });
+  create_Theme.bodyCol("#D8DEE9", "#181b1c");
+  create_Theme.topHeading_Col("#D8DEE9", "#1f2223");
 };
 
-const apply_lightTheme = () => {
-  let body = document.querySelector("body");
 
-  body.style.color = "cyan";
-};
 
 let toggleCounter = 0;
 
 themeToggle_Btn.addEventListener("click", () => {
-     apply_DarkTheme()
+  toggleCounter++;
+
+  toggleCounter % 2 != 0 ? apply_DarkTheme() : apply_LightTheme();
 });
