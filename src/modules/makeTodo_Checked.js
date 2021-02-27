@@ -30,7 +30,7 @@ export const makeTodoChecked = () => {
 
     t.addEventListener("click", () => {
       let temp_WholeTodo = t.parentElement.parentElement;
-//      temp_WholeTodo.style.backgroundImage = url
+
       temp_WholeTodo.classList.toggle("todo_done");
       temp_WholeTodo.children[0].classList.toggle("todo_done_Title");
       temp_WholeTodo.children[2].classList.toggle("todo_done_Btns");

@@ -207,6 +207,7 @@ body {
 .currentProjectName .fa-adjust {
   float: right;
   font-size: 1.5rem;
+  display: none;
 }
 
 .fa-adjust:hover {
@@ -362,7 +363,8 @@ body {
   width: 15rem;
   padding: 0.3rem;
   border-radius: 0.5rem;
-  background-image: url("../assets/img/doneChan.png");
+  font-family: "Quicksand", sans-serif;
+  /* font-family: "Poppins", sans-serif;*/
 }
 
 .dark_atodo {
@@ -388,7 +390,7 @@ body {
   margin-top: 1rem;
   background-color: white;
   display: inline-flex;
-  margin-left: 7rem;
+  margin-left: 5rem;
 }
 
 .fa-edit,

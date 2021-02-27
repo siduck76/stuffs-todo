@@ -85,8 +85,7 @@ export const apply_LightTheme = () => {
 
   create_Theme.sidebar_Col("#f0f0f0", "#f0f0f0");
   create_Theme.sideBar_Icons("#9592e7", "#ff8080", "#c0e4fe", "#4c4f5c");
-    create_Theme.todo_Col("#ffffcb", "#1d2021");
-
+  create_Theme.todo_Col("#ffffcb", "#1d2021");
 };
 
 export const apply_DarkTheme = () => {
