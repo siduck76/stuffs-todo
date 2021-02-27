@@ -1,4 +1,5 @@
 import { defaultTheme } from "../index";
+import { saveto_LocalStorage } from "./miscFunctions";
 
 let themeToggle_Btn = document.querySelector(".fa-adjust");
 
@@ -23,15 +24,20 @@ const create_Theme = (() => {
 
   const sidebar_Col = (borderCol, borderLeft_Col) => {
     let sbar = document.querySelector(".sidebar");
-    let project  = document.querySelectorAll('.project')
+    let project = document.querySelectorAll(".project");
 
     project.forEach((i) => {
       i.style.borderLeft = `0.2rem solid ${borderLeft_Col}`;
-    })
+    });
     sbar.style.borderRight = `2px solid ${borderCol}`;
   };
 
-  const sideBar_Icons = (todayTodoCol, importantTodos_col, project_col) => {
+  const sideBar_Icons = (
+    todayTodoCol,
+    importantTodos_col,
+    project_col,
+    projectIcons_col
+  ) => {
     let t1 = document.querySelector(".fa-calendar-day");
     let t2 = document.querySelector(".fa-meteor");
     let t3 = document.querySelector(".fa-folder");
@@ -39,8 +45,16 @@ const create_Theme = (() => {
     t1.style.color = todayTodoCol;
     t2.style.color = importantTodos_col;
     t3.style.color = project_col;
-  };
 
+    let projectIcons = document.querySelectorAll(".projectIcon");
+    let projects = document.querySelectorAll(".project");
+
+    [projectIcons, projects].forEach((i) => {
+      i.forEach((j) => {
+        j.style.color = projectIcons_col;
+      });
+    });
+  };
 
   return {
     bodyCol,
@@ -51,22 +65,30 @@ const create_Theme = (() => {
   };
 })();
 
-const apply_LightTheme = () => {
+export const apply_LightTheme = () => {
+  defaultTheme = "light";
+  saveto_LocalStorage();
+
   create_Theme.bodyCol("#4c4f5c", "white");
+
   create_Theme.topHeading_Col("white", "#1d2021");
   create_Theme.newProjectBtn_Col("#1d2021", "white");
 
   create_Theme.sidebar_Col("#f0f0f0", "#f0f0f0");
-  create_Theme.sideBar_Icons("#9592e7", "#ff8080", "#c0e4fe");
+  create_Theme.sideBar_Icons("#9592e7", "#ff8080", "#c0e4fe", "#4c4f5c");
 };
 
-const apply_DarkTheme = () => {
+export const apply_DarkTheme = () => {
+  defaultTheme = "dark";
+  saveto_LocalStorage();
+
   create_Theme.bodyCol("#D8DEE9", "#181b1c");
+
   create_Theme.topHeading_Col("#D8DEE9", "#1f2223");
   create_Theme.newProjectBtn_Col("#1d2021", "#61afef");
 
-  create_Theme.sidebar_Col("#1d2021","#a3be8c");
-  create_Theme.sideBar_Icons("#61afef", "#f5f5f5", "#d08770");
+  create_Theme.sidebar_Col("#1d2021", "#a3be8c");
+  create_Theme.sideBar_Icons("#61afef", "#f5f5f5", "#d08770", "#818485");
 };
 
 let toggleCounter = 0;
