@@ -1,7 +1,7 @@
 import { saveto_LocalStorage } from "./miscFunctions";
 import { todoList, defaultTheme } from "../index";
 
-let normal_TodoCol = "rgb(255, 255, 203)";
+let normal_TodoCol = "rgb(255, 234, 203)";
 let finished_todoCol = "rgb(220, 255, 237)";
 
 export const makeTodoChecked = () => {
