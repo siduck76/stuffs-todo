@@ -45,7 +45,7 @@ export const makeTodoChecked = () => {
             if (tt.title == t.firstElementChild.textContent) {
               let style = window.getComputedStyle(t);
               let tempBGcolor = style.getPropertyValue("background-color");
-
+             
               if (tempBGcolor == finished_todoCol) {
                 tt.status = "done";
                 t.children[3].textContent = "done";
