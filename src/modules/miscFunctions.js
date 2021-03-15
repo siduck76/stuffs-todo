@@ -1,4 +1,9 @@
-import { todoList, projectArr, whichPro_Clicked /*, defaultTheme */ } from "../index";
+import {
+  todoList,
+  projectArr,
+  whichPro_Clicked /*, defaultTheme */,
+} from "../index";
+
 import { pName } from "./divSelectors";
 import { create_todo } from "./createTodo";
 import { p_onHover } from "./buttonClicks";
@@ -68,7 +73,7 @@ export const retrieve_LocalStorage = () => {
   /* save theme
   defaultTheme = localStorage.getItem("saved_Theme");
 
-   defaultTheme == "light" ? apply_LightTheme() : apply_DarkTheme() */;
+   defaultTheme == "light" ? apply_LightTheme() : apply_DarkTheme() */
 };
 
 export const createTodo_List = () => {
