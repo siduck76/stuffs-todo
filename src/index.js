@@ -1,12 +1,12 @@
-import {} from "./modules/buttonClicks";
+import "./modules/buttonClicks"
 
 import {
   retrieve_LocalStorage,
   showTodays_todo,
 } from "./modules/miscFunctions";
 
-import {} from "./modules/settingsPage";
-import {} from "./modules/themeToggle";
+import  "./modules/settingsPage";
+import  "./modules/themeToggle";
 
 export let whichPro_Clicked = "default",
   todoList = [],
@@ -16,5 +16,3 @@ export let whichPro_Clicked = "default",
 if (localStorage.length > 0) retrieve_LocalStorage();
 
 showTodays_todo();
-
-
