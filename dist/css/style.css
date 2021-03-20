@@ -8,10 +8,6 @@ body {
   transition: 0.2s all;
 }
 
-.darkBody {
-  background-color: #181b1c;
-  color: white;
-}
 
 /* main heading */
 
@@ -27,10 +23,6 @@ body {
   color: white;
 }
 
-.dark_topHeading {
-  background-color: #1f2223;
-  color: #c8ccd4;
-}
 
 .newProjectBtn {
   display: flex;
@@ -42,10 +34,6 @@ body {
   border-radius: 0.5rem;
 }
 
-.dark_newProjectBtn {
-  background-color: #61afef;
-  color: #1f2223;
-}
 
 .newProjectBtn:hover {
   cursor: pointer;
@@ -93,20 +81,12 @@ body {
   border-right: 2px solid #f0f0f0;
 }
 
-.dark_sidebar {
-  border-right: 2px solid #1d2021;
-}
-
 .todaysTodos,
 .projects,
 .importantTodos {
   padding: 0.8rem;
   font-size: 1.3rem;
   text-align: left;
-}
-
-.dark_Today_ImportantTodos {
-  background-color: #1d2021;
 }
 
 .todaysTodos:hover,
@@ -155,10 +135,6 @@ body {
   color: #c0e4fe;
 }
 
-.dark_folder {
-  color: #d08770;
-}
-
 .projectList {
   padding: 0rem 0rem 0rem 1.6rem;
   display: flex;
@@ -172,12 +148,6 @@ body {
   padding-top: 0.5rem;
 }
 
-.dark_project {
-  border-left: 0.2rem solid #a3be8c;
-  color: #a3be8c;
-  padding-left: 2rem;
-  padding-top: 0.5rem;
-}
 .sideBarLinks {
   padding-left: 0rem;
 }
@@ -188,10 +158,6 @@ body {
 
 .projectIcon {
   color: #6a6d7a;
-}
-
-.dark_projectIcon {
-  color: #c8ccd4;
 }
 
 /* mainContent */
@@ -220,7 +186,7 @@ body {
   margin-bottom: 2rem;
 }
 
-/* add project */
+/* add project button */
 
 .addProject {
   display: none;
@@ -365,10 +331,6 @@ body {
   border-radius: 0.5rem;
   font-family: "Mali", cursive;
   /*#A1FFCD checked todo bg */
-}
-
-.dark_atodo {
-  background-color: #1d2021;
 }
 
 .aTodo_Title {
