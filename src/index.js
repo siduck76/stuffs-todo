@@ -8,7 +8,6 @@ import {
 export let whichPro_Clicked = "default",
   todoList = [],
   projectArr = [];
-// defaultTheme = "light";
 
 if (localStorage.length > 0) retrieve_LocalStorage();
 

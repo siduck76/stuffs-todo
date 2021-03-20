@@ -1,28 +1,10 @@
 import { saveto_LocalStorage } from "./miscFunctions";
-import { todoList /*, defaultTheme */} from "../index";
+import { todoList } from "../index";
 
 let normal_TodoCol = "rgb(255, 234, 203)";
 let finished_todoCol = "rgb(220, 255, 237)";
 
 export const makeTodoChecked = () => {
- /* if (defaultTheme == "light") {
-    normal_TodoCol = "rgb(255, 255, 203)";
-    finished_todoCol = "rgb(220, 255, 237)";
-
-    console.log(defaultTheme);
-  } else if (defaultTheme == "dark") {
-    normal_TodoCol = "rgb(29, 32, 33)";
-    finished_todoCol = "  rgb(29, 32, 33)"; 
-
-    let atodos = document.querySelectorAll(".atodo");
-    atodos.forEach((i) => {
-      i.style.backgroundColor = normal_TodoCol;
-    });
-    normal_TodoCol = "rgb(29, 32, 33)";
-    finished_todoCol = "  rgb(29, 32, 33)";
-    console.log(defaultTheme);
-  } */
-
   let checkIcons = document.querySelectorAll(".fa-circle");
 
   checkIcons.forEach((t) => {
@@ -45,12 +27,11 @@ export const makeTodoChecked = () => {
             if (tt.title == t.firstElementChild.textContent) {
               let style = window.getComputedStyle(t);
               let tempBGcolor = style.getPropertyValue("background-color");
-             
+
               if (tempBGcolor == finished_todoCol) {
                 tt.status = "done";
                 t.children[3].textContent = "done";
                 saveto_LocalStorage();
-
               } else if (tempBGcolor == normal_TodoCol) {
                 tt.status = "not_done";
                 t.children[3].textContent = "not_done";
